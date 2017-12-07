@@ -22,14 +22,10 @@ public class Connection {
 		this.port = port;
 	}
 	
-	public String start() {
-		try {
+	public void start() throws IOException {
 			sockAddress=new InetSocketAddress(host, port);
 			socket.connect(sockAddress, timeout);
-		} catch (IOException e) {
-			return "[ERROR] Connection failed: " + e.getMessage();
-		}
-		return "[Client:" + socket.getLocalAddress() + "] Connected to " + host + " through Port " + port + ".";
+			}
 	}
 	
 	
