@@ -25,7 +25,6 @@ public class Connection {
 	public void start() throws IOException {
 			sockAddress=new InetSocketAddress(host, port);
 			socket.connect(sockAddress, timeout);
-			}
 	}
 	
 	
