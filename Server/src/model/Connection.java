@@ -14,15 +14,30 @@ public class Connection {
 	private Socket socket = new Socket();
 	private ServerSocket serverSocket;
 	
+	/**
+	 * Constructs a connection on a specific port
+	 * @param port Port, the Server is listening on
+	 */
 	public Connection(int port) {
 		this.port = port;
 	}
 	
+	/**
+	 * Constructs a Connection on e specific port and a number of threads, which handle these connections
+	 * @param port Port, the server is listening on
+	 * @param numOfThreads number of threads, which handle connections
+	 */
 	public Connection(int port, int numOfThreads) {
 		this.port = port;
 		this.numOfThreads = numOfThreads;
 	}
 	
+	/**
+	 * TODO
+	 * @param port
+	 * @param timeout
+	 * @param numOfThreads
+	 */
 	public Connection(int port, int timeout, int numOfThreads) {
 		this.port = port;
 		this.timeout = timeout;
@@ -31,8 +46,11 @@ public class Connection {
 	
 
 	
-	
-	public String start() throws IOException{
+	/**
+	 * Starts multiple threads which listen on specific ports a client can connect to.
+	 * @throws IOException
+	 */
+	public void start() throws IOException{
 		final ExecutorService executor = Executors.newFixedThreadPool(numOfThreads);
 		serverSocket = new ServerSocket(port);
 		
