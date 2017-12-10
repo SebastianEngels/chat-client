@@ -5,7 +5,7 @@ import model.Connection;
 public class Main {
 
 	public static void main(String[] args) {
-		Connection connection = new Connection(5666, 5);
+		Connection connection = new Connection(5666);
 		try {
 			connection.start();
 		} catch (IOException e) {

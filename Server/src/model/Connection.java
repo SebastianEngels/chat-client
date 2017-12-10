@@ -10,7 +10,7 @@ public class Connection {
 
 	private int port;
 	private int timeout = 100;
-	private int numOfThreads = 10;
+	private int numOfThreads = 3;
 	private Socket socket = new Socket();
 	private ServerSocket serverSocket;
 	
