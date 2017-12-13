@@ -42,4 +42,9 @@ public class DataPackage {
 	public void setJsnData(JSONObject jsnData) {
 		this.jsnData = jsnData;
 	}
+
+	@Override
+	public String toString() {
+		return jsnData.toJSONString();
+	}
 }
