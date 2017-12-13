@@ -27,6 +27,10 @@ public class Connection {
 			socket.connect(sockAddress, timeout);
 	}
 	
+	public void sendPackage(DataPackage data) {
+		
+	}
+	
 	
 	public String getHost() {
 		return host;
